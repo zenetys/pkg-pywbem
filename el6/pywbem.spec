@@ -58,5 +58,6 @@ rm -rf %{buildroot}
 * Sun Jun 28 2009 David Nalley <david@gnsa.us> 0.7.0-2
 - Added some verbiage regarding what WBEM is and expanding WBEM and CIM acronyms
 - Added python-twisted as a dependency
-* Mon Jun 25 2009 David Nalley <david@gnsa.us> 0.7.0-1
+
+* Thu Jun 25 2009 David Nalley <david@gnsa.us> 0.7.0-1
 - Initial packaging
