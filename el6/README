@@ -1,0 +1,5 @@
+Original spec file was imported from the pywbem-0.7.0-4 CentOS 6 source RPM:
+http://vault.centos.org/6.9/os/Source/SPackages/pywbem-0.7.0-4.el6.src.rpm
+
+The python-ply dependency is available from the EPEL 6 repository.
+Other dependencies are available in the standard CentOS 6 repository.
