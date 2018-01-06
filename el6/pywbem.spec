@@ -1,28 +1,28 @@
 %{!?python_sitelib: %define python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
-Name:           pywbem 
+Name:           pywbem
 Version:        0.7.0
-Release:        4%{dist} 
+Release:        4%{dist}
 Summary:        Python WBEM Client and Provider Interface
 Group:          Development/Libraries
 License:        LGPLv2
 URL:            http://pywbem.sourceforge.net
 Source0:        http://downloads.sourceforge.net/pywbem/pywbem-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires:  python-setuptools-devel 
+BuildRequires:  python-setuptools-devel
 BuildArch:      noarch
 Requires:       python-twisted
 %description
-A Python library for making CIM (Common Information Model) operations over HTTP 
-using the WBEM CIM-XML protocol. It is based on the idea that a good WBEM 
-client should be easy to use and not necessarily require a large amount of 
-programming knowledge. It is suitable for a large range of tasks from simply 
-poking around to writing web and GUI applications. 
+A Python library for making CIM (Common Information Model) operations over HTTP
+using the WBEM CIM-XML protocol. It is based on the idea that a good WBEM
+client should be easy to use and not necessarily require a large amount of
+programming knowledge. It is suitable for a large range of tasks from simply
+poking around to writing web and GUI applications.
 
-WBEM, or Web Based Enterprise Management is a manageability protocol, like 
-SNMP, standardised by the Distributed Management Task Force (DMTF) available 
+WBEM, or Web Based Enterprise Management is a manageability protocol, like
+SNMP, standardised by the Distributed Management Task Force (DMTF) available
 at http://www.dmtf.org/standards/wbem.
 
-It also provides a Python provider interface, and is the fastest and 
+It also provides a Python provider interface, and is the fastest and
 easiest way to write providers on the planet.
 
 %prep
@@ -38,7 +38,7 @@ mkdir -p -m755 %{buildroot}%{_bindir}
 mv %{buildroot}/%{python_sitelib}/%{name}/wbemcli.py %{buildroot}/%{_bindir}/pywbemcli
 mv %{buildroot}/%{python_sitelib}/%{name}/mof_compiler.py %{buildroot}/%{_bindir}/mofcomp
 
-%clean 
+%clean
 rm -rf %{buildroot}
 
 %files
@@ -60,4 +60,3 @@ rm -rf %{buildroot}
 - Added python-twisted as a dependency
 * Mon Jun 25 2009 David Nalley <david@gnsa.us> 0.7.0-1
 - Initial packaging
-
